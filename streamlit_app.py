@@ -46,7 +46,7 @@ if ingredients_list:
 
         # Writes the nutrition info of the selected ingredients
         st.subheader(fruit_chosen + ' Nutrition Information')
-        smoothiefroot_response = requests.get(f"https://my.smoothiefroot.com/api/fruit/{search_on})
+        smoothiefroot_response = requests.get(f"https://my.smoothiefroot.com/api/fruit/{search_on}")
         sf_df = st.dataframe(data=smoothiefroot_response.json(), use_container_width=True)
 
     # Writes the insert statement using the selected ingredients and name
